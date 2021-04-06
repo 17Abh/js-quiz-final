@@ -16,8 +16,7 @@ const quizDB = [
     },
 
     {
-
-        question: `${questionCount + 1} What is the full form of URL?`,
+        question: `2. What is the full form of URL?`,
         a: "Universal Resource Locator",
         b: "Unified Resource Locator",
         c: "Uniform Resource Locator",
@@ -26,15 +25,6 @@ const quizDB = [
         type: "radioBox"
     },
 
-    {
-        question: "11. What is full form of ASCII?",
-        a: "Authentic Standard Code for Information Interchange",
-        b: "Australian Standard Code for Information Interchange",
-        c: "American Standard Code for Information Interchange",
-        d: "None",
-        ans:["ans1", "ans3"],
-        type: "checkbox"
-    },
 
     {
         question: "3. What is the full form of PDF?",
@@ -636,14 +626,15 @@ submit.addEventListener('click',() => {
             answer.checked = true;
             submit.style.background = "blue";
             
-            return;
+            if(answer.id == markedAns[1]  ){
+                answer.checked = true;
+    
+                
+            }
+            
         }
     
-        if(answer.id == markedAns[1]  ){
-            answer.checked = true;
-            
-            return;
-        }
+       
     });
     }
 });
